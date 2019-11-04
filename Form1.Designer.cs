@@ -35,6 +35,8 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.cmbTipType = new System.Windows.Forms.ComboBox();
             this.lstChecks = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtLocation = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblSubtotal
@@ -99,14 +101,33 @@
             this.lstChecks.ItemHeight = 25;
             this.lstChecks.Location = new System.Drawing.Point(540, 92);
             this.lstChecks.Name = "lstChecks";
-            this.lstChecks.Size = new System.Drawing.Size(120, 279);
+            this.lstChecks.Size = new System.Drawing.Size(357, 279);
             this.lstChecks.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(951, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 25);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Location";
+            // 
+            // txtLocation
+            // 
+            this.txtLocation.Location = new System.Drawing.Point(956, 138);
+            this.txtLocation.Name = "txtLocation";
+            this.txtLocation.Size = new System.Drawing.Size(172, 31);
+            this.txtLocation.TabIndex = 8;
+            this.txtLocation.Text = "Columbus, OH";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1156, 450);
+            this.Controls.Add(this.txtLocation);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lstChecks);
             this.Controls.Add(this.cmbTipType);
             this.Controls.Add(this.lblTotal);
@@ -130,6 +151,8 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.ComboBox cmbTipType;
         private System.Windows.Forms.ListBox lstChecks;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtLocation;
     }
 }
 
