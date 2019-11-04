@@ -1,0 +1,5 @@
+obj/
+.vs/
+bin/
+.vs/ClassProject/v15/.suo
+.vs/ClassProject/v15/Server/sqlite3/storage.ide-wal
