@@ -21,7 +21,7 @@ namespace ClassProject
         }
         public TipType tipType = TipType.GOOD;
 
-
+        public List<float> totals = new List<float>();
 
         public Form1()
         {
@@ -61,6 +61,20 @@ namespace ClassProject
             total = subtotal + tip;
             //Display the total to the user
             lblTotal.Text = ""+total;
+            //Refresh bill list
+            totals.Add(total);
+            refreshList();
+        }
+
+        public void refreshList()
+        {
+            //Clear list box
+            lstChecks.Items.Clear();
+            //Add all items to the list box
+            foreach(float f in totals)
+            {
+                lstChecks.Items.Add(f);
+            }
         }
     }
 }

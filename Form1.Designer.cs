@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.cmbTipType = new System.Windows.Forms.ComboBox();
+            this.lstChecks = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lblSubtotal
@@ -92,11 +93,21 @@
             this.cmbTipType.Size = new System.Drawing.Size(121, 33);
             this.cmbTipType.TabIndex = 5;
             // 
+            // lstChecks
+            // 
+            this.lstChecks.FormattingEnabled = true;
+            this.lstChecks.ItemHeight = 25;
+            this.lstChecks.Location = new System.Drawing.Point(540, 92);
+            this.lstChecks.Name = "lstChecks";
+            this.lstChecks.Size = new System.Drawing.Size(120, 279);
+            this.lstChecks.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lstChecks);
             this.Controls.Add(this.cmbTipType);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label1);
@@ -118,6 +129,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.ComboBox cmbTipType;
+        private System.Windows.Forms.ListBox lstChecks;
     }
 }
 
