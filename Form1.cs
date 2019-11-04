@@ -16,5 +16,18 @@ namespace ClassProject
         {
             InitializeComponent();
         }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            float total = 0;
+            //Get the subtotal from the textbox
+            float subtotal = float.Parse(txtSubtotal.Text);
+            //Calculate the tip
+            float tip = subtotal * 0.15f;
+            //Calculate the total
+            total = subtotal + tip;
+            //Display the total to the user
+            lblTotal.Text = ""+total;
+        }
     }
 }
