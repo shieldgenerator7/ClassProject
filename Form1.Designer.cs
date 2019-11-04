@@ -33,6 +33,7 @@
             this.btnCalculate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.cmbTipType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblSubtotal
@@ -79,11 +80,24 @@
             this.lblTotal.TabIndex = 4;
             this.lblTotal.Text = "$0.00";
             // 
+            // cmbTipType
+            // 
+            this.cmbTipType.FormattingEnabled = true;
+            this.cmbTipType.Items.AddRange(new object[] {
+            "Excellent",
+            "Good",
+            "Poor"});
+            this.cmbTipType.Location = new System.Drawing.Point(362, 138);
+            this.cmbTipType.Name = "cmbTipType";
+            this.cmbTipType.Size = new System.Drawing.Size(121, 33);
+            this.cmbTipType.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbTipType);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCalculate);
@@ -103,6 +117,7 @@
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.ComboBox cmbTipType;
     }
 }
 
