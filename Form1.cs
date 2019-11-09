@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -100,6 +101,23 @@ namespace ClassProject
             }
             //Update UI
             lblSumTotal.Text = "" + sum;
+        }
+        
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string filePath = @"C:\Users\Student\Documents\savefile.txt";
+            string text = "";
+            foreach(Check check in checks)
+            {
+                text += "\n" + check.ToString();
+            }
+            File.WriteAllText(filePath, text);
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string filePath = @"C:\Users\Student\Documents\savefile.txt";
+            txtOpen.Text = File.ReadAllText(filePath);
         }
     }
 }
