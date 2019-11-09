@@ -37,29 +37,34 @@
             this.lstChecks = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLocation = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblSumTotal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblSubtotal
             // 
             this.lblSubtotal.AutoSize = true;
-            this.lblSubtotal.Location = new System.Drawing.Point(189, 88);
+            this.lblSubtotal.Location = new System.Drawing.Point(94, 46);
+            this.lblSubtotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(91, 25);
+            this.lblSubtotal.Size = new System.Drawing.Size(46, 13);
             this.lblSubtotal.TabIndex = 0;
             this.lblSubtotal.Text = "Subtotal";
             // 
             // txtSubtotal
             // 
-            this.txtSubtotal.Location = new System.Drawing.Point(194, 138);
+            this.txtSubtotal.Location = new System.Drawing.Point(97, 72);
+            this.txtSubtotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new System.Drawing.Size(100, 31);
+            this.txtSubtotal.Size = new System.Drawing.Size(52, 20);
             this.txtSubtotal.TabIndex = 1;
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(194, 198);
+            this.btnCalculate.Location = new System.Drawing.Point(97, 103);
+            this.btnCalculate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(122, 36);
+            this.btnCalculate.Size = new System.Drawing.Size(61, 19);
             this.btnCalculate.TabIndex = 2;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
@@ -68,64 +73,85 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(194, 263);
+            this.label1.Location = new System.Drawing.Point(97, 137);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 25);
+            this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Total";
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(194, 313);
+            this.lblTotal.Location = new System.Drawing.Point(97, 163);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(66, 25);
+            this.lblTotal.Size = new System.Drawing.Size(34, 13);
             this.lblTotal.TabIndex = 4;
             this.lblTotal.Text = "$0.00";
             // 
             // cmbTipType
             // 
             this.cmbTipType.FormattingEnabled = true;
-            this.cmbTipType.Items.AddRange(new object[] {
-            "Excellent",
-            "Good",
-            "Poor"});
-            this.cmbTipType.Location = new System.Drawing.Point(362, 138);
+            this.cmbTipType.Location = new System.Drawing.Point(181, 72);
+            this.cmbTipType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTipType.Name = "cmbTipType";
-            this.cmbTipType.Size = new System.Drawing.Size(121, 33);
+            this.cmbTipType.Size = new System.Drawing.Size(62, 21);
             this.cmbTipType.TabIndex = 5;
             // 
             // lstChecks
             // 
             this.lstChecks.FormattingEnabled = true;
-            this.lstChecks.ItemHeight = 25;
-            this.lstChecks.Location = new System.Drawing.Point(540, 92);
+            this.lstChecks.Location = new System.Drawing.Point(270, 48);
+            this.lstChecks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstChecks.Name = "lstChecks";
-            this.lstChecks.Size = new System.Drawing.Size(357, 279);
+            this.lstChecks.Size = new System.Drawing.Size(180, 147);
             this.lstChecks.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(951, 92);
+            this.label2.Location = new System.Drawing.Point(476, 48);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 25);
+            this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Location";
             // 
             // txtLocation
             // 
-            this.txtLocation.Location = new System.Drawing.Point(956, 138);
+            this.txtLocation.Location = new System.Drawing.Point(478, 72);
+            this.txtLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(172, 31);
+            this.txtLocation.Size = new System.Drawing.Size(88, 20);
             this.txtLocation.TabIndex = 8;
             this.txtLocation.Text = "Columbus, OH";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(270, 201);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Sum Total";
+            // 
+            // lblSumTotal
+            // 
+            this.lblSumTotal.AutoSize = true;
+            this.lblSumTotal.Location = new System.Drawing.Point(273, 229);
+            this.lblSumTotal.Name = "lblSumTotal";
+            this.lblSumTotal.Size = new System.Drawing.Size(34, 13);
+            this.lblSumTotal.TabIndex = 10;
+            this.lblSumTotal.Text = "$0.00";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1156, 450);
+            this.ClientSize = new System.Drawing.Size(578, 318);
+            this.Controls.Add(this.lblSumTotal);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtLocation);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lstChecks);
@@ -135,6 +161,7 @@
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.txtSubtotal);
             this.Controls.Add(this.lblSubtotal);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -153,6 +180,8 @@
         private System.Windows.Forms.ListBox lstChecks;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtLocation;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblSumTotal;
     }
 }
 

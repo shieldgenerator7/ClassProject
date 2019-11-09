@@ -79,5 +79,17 @@ namespace ClassProject
                 lstChecks.Items.Add(check);
             }
         }
+
+        public void updateTotal()
+        {
+            //loop over all checks
+            float sum = 0;
+            foreach(Check check in checks)
+            {
+                sum += check.total;
+            }
+            //Update UI
+            lblSumTotal.Text = "" + sum;
+        }
     }
 }
