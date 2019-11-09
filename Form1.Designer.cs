@@ -39,6 +39,8 @@
             this.txtLocation = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblSumTotal = new System.Windows.Forms.Label();
+            this.rdbDineIn = new System.Windows.Forms.RadioButton();
+            this.rdbFastFood = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // lblSubtotal
@@ -145,11 +147,35 @@
             this.lblSumTotal.TabIndex = 10;
             this.lblSumTotal.Text = "$0.00";
             // 
+            // rdbDineIn
+            // 
+            this.rdbDineIn.AutoSize = true;
+            this.rdbDineIn.Checked = true;
+            this.rdbDineIn.Location = new System.Drawing.Point(181, 103);
+            this.rdbDineIn.Name = "rdbDineIn";
+            this.rdbDineIn.Size = new System.Drawing.Size(59, 17);
+            this.rdbDineIn.TabIndex = 11;
+            this.rdbDineIn.TabStop = true;
+            this.rdbDineIn.Text = "Dine In";
+            this.rdbDineIn.UseVisualStyleBackColor = true;
+            // 
+            // rdbFastFood
+            // 
+            this.rdbFastFood.AutoSize = true;
+            this.rdbFastFood.Location = new System.Drawing.Point(181, 126);
+            this.rdbFastFood.Name = "rdbFastFood";
+            this.rdbFastFood.Size = new System.Drawing.Size(72, 17);
+            this.rdbFastFood.TabIndex = 12;
+            this.rdbFastFood.Text = "Fast Food";
+            this.rdbFastFood.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 318);
+            this.Controls.Add(this.rdbFastFood);
+            this.Controls.Add(this.rdbDineIn);
             this.Controls.Add(this.lblSumTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtLocation);
@@ -182,6 +208,8 @@
         private System.Windows.Forms.TextBox txtLocation;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblSumTotal;
+        private System.Windows.Forms.RadioButton rdbDineIn;
+        private System.Windows.Forms.RadioButton rdbFastFood;
     }
 }
 

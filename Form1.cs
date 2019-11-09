@@ -27,7 +27,7 @@ namespace ClassProject
         {
             InitializeComponent();
 
-            foreach(var item in Enum.GetValues(typeof(TipType)))
+            foreach (var item in Enum.GetValues(typeof(TipType)))
             {
                 cmbTipType.Items.Add(item);
             }
@@ -61,7 +61,15 @@ namespace ClassProject
             //Calculate the total
             total = subtotal + tip;
             //Create check object
-            Check check = new Check(total, txtLocation.Text);
+            Check check = null;
+            if (rdbDineIn.Checked == true)
+            {
+                check = new Check(total, txtLocation.Text);
+            }
+            else if (rdbFastFood.Checked == true)
+            {
+                check = new FastFoodCheck(total, txtLocation.Text);
+            }
             total = check.calculateTotal(subtotal);
             //Display the total to the user
             lblTotal.Text = "" + total;
@@ -76,7 +84,7 @@ namespace ClassProject
             //Clear list box
             lstChecks.Items.Clear();
             //Add all items to the list box
-            foreach(Check check in checks)
+            foreach (Check check in checks)
             {
                 lstChecks.Items.Add(check);
             }
@@ -86,7 +94,7 @@ namespace ClassProject
         {
             //loop over all checks
             float sum = 0;
-            foreach(Check check in checks)
+            foreach (Check check in checks)
             {
                 sum += check.total;
             }
