@@ -123,8 +123,16 @@ namespace ClassProject
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string filePath = @"C:\Users\Student\Documents\savefile.txt";
-            txtOpen.Text = File.ReadAllText(filePath);
+            OpenFileDialog openDialog = new OpenFileDialog();
+            openDialog.Filter = "txt files (*.txt)|*.txt";
+            openDialog.FilterIndex = 0;
+            openDialog.RestoreDirectory = true;
+
+            if (openDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openDialog.FileName;
+                txtOpen.Text = File.ReadAllText(filePath);
+            }
         }
     }
 }
