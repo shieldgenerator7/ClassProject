@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -102,7 +104,7 @@ namespace ClassProject
             //Update UI
             lblSumTotal.Text = "" + sum;
         }
-        
+
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveDialog = new SaveFileDialog();
@@ -112,12 +114,10 @@ namespace ClassProject
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = saveDialog.FileName;
-                string text = "";
-                foreach (Check check in checks)
-                {
-                    text += "\n" + check.ToString();
-                }
-                File.WriteAllText(filePath, text);
+                FileStream buffer = File.Create(filePath);
+                IFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(buffer, checks);
+                buffer.Close();
             }
         }
 
@@ -130,8 +130,14 @@ namespace ClassProject
 
             if (openDialog.ShowDialog() == DialogResult.OK)
             {
+                IFormatter formatter = new BinaryFormatter();
                 string filePath = openDialog.FileName;
-                txtOpen.Text = File.ReadAllText(filePath);
+                FileStream buffer = File.OpenRead(filePath);
+
+                checks = (List<Check>)formatter.Deserialize(buffer);
+                buffer.Close();
+                refreshList();
+                updateTotal();
             }
         }
     }
