@@ -105,13 +105,20 @@ namespace ClassProject
         
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string filePath = @"C:\Users\Student\Documents\savefile.txt";
-            string text = "";
-            foreach(Check check in checks)
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.Filter = "txt files (*.txt)|*.txt";
+            saveDialog.FilterIndex = 0;
+            saveDialog.RestoreDirectory = true;
+            if (saveDialog.ShowDialog() == DialogResult.OK)
             {
-                text += "\n" + check.ToString();
+                string filePath = saveDialog.FileName;
+                string text = "";
+                foreach (Check check in checks)
+                {
+                    text += "\n" + check.ToString();
+                }
+                File.WriteAllText(filePath, text);
             }
-            File.WriteAllText(filePath, text);
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
