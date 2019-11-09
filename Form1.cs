@@ -130,10 +130,9 @@ namespace ClassProject
 
             if (openDialog.ShowDialog() == DialogResult.OK)
             {
-                IFormatter formatter = new BinaryFormatter();
                 string filePath = openDialog.FileName;
+                IFormatter formatter = new BinaryFormatter();
                 FileStream buffer = File.OpenRead(filePath);
-
                 checks = (List<Check>)formatter.Deserialize(buffer);
                 buffer.Close();
                 refreshList();
