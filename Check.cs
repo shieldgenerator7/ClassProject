@@ -13,6 +13,13 @@ public class Check
         this.location = location;
 	}
 
+    public float calculateTotal(float subtotal)
+    {
+        float tip = subtotal * 0.15f;
+        this.total = subtotal + tip;
+        return this.total;
+    }
+
     public override string ToString()
     {
         return "Total: " + total + " at location: " + location;

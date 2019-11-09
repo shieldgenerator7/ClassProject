@@ -60,10 +60,11 @@ namespace ClassProject
             float tip = subtotal * tipPercentage;
             //Calculate the total
             total = subtotal + tip;
-            //Display the total to the user
-            lblTotal.Text = ""+total;
             //Create check object
             Check check = new Check(total, txtLocation.Text);
+            total = check.calculateTotal(subtotal);
+            //Display the total to the user
+            lblTotal.Text = "" + total;
             //Add check to list
             checks.Add(check);
             //Refresh check list
