@@ -31,6 +31,7 @@ namespace ClassProject
             {
                 cmbTipType.Items.Add(item);
             }
+            cmbTipType.SelectedIndex = 0;
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
