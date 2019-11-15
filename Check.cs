@@ -31,7 +31,7 @@ public class Check : ISerializable
         info.AddValue("date", this.date);
         info.AddValue("location", this.location);
     }
-
+    
     public virtual float calculateTotal(float subtotal)
     {
         float tip = subtotal * 0.15f;
@@ -41,6 +41,19 @@ public class Check : ISerializable
 
     public override string ToString()
     {
-        return "Total: " + total + " at location: " + location;
+        string s = "Total: " + total + " at location: " + location;
+        return s;
+    }
+
+    //Define displayInfo method
+    public string displayInfo()
+    {
+        //make display string
+        string result = "";
+        result += "Total: " + total + Environment.NewLine;
+        result += "Location: " + location + Environment.NewLine;
+        result += "\n" + "Date: " + date;
+        //return display string
+        return result;
     }
 }

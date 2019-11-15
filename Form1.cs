@@ -139,5 +139,11 @@ namespace ClassProject
                 updateTotal();
             }
         }
+
+        private void lstChecks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Check selectedCheck = (Check)lstChecks.SelectedItem;
+            txtDisplay.Text = selectedCheck.displayInfo();
+        }
     }
 }

@@ -45,34 +45,34 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtOpen = new System.Windows.Forms.TextBox();
+            this.txtDisplay = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblSubtotal
             // 
             this.lblSubtotal.AutoSize = true;
-            this.lblSubtotal.Location = new System.Drawing.Point(94, 46);
-            this.lblSubtotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSubtotal.Location = new System.Drawing.Point(188, 88);
+            this.lblSubtotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(46, 13);
+            this.lblSubtotal.Size = new System.Drawing.Size(91, 25);
             this.lblSubtotal.TabIndex = 0;
             this.lblSubtotal.Text = "Subtotal";
             // 
             // txtSubtotal
             // 
-            this.txtSubtotal.Location = new System.Drawing.Point(97, 72);
-            this.txtSubtotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSubtotal.Location = new System.Drawing.Point(194, 138);
+            this.txtSubtotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new System.Drawing.Size(52, 20);
+            this.txtSubtotal.Size = new System.Drawing.Size(100, 31);
             this.txtSubtotal.TabIndex = 1;
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(97, 103);
-            this.btnCalculate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCalculate.Location = new System.Drawing.Point(194, 198);
+            this.btnCalculate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(61, 19);
+            this.btnCalculate.Size = new System.Drawing.Size(122, 37);
             this.btnCalculate.TabIndex = 2;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
@@ -81,75 +81,79 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 137);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(194, 263);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.Size = new System.Drawing.Size(60, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Total";
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(97, 163);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotal.Location = new System.Drawing.Point(194, 313);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(34, 13);
+            this.lblTotal.Size = new System.Drawing.Size(66, 25);
             this.lblTotal.TabIndex = 4;
             this.lblTotal.Text = "$0.00";
             // 
             // cmbTipType
             // 
             this.cmbTipType.FormattingEnabled = true;
-            this.cmbTipType.Location = new System.Drawing.Point(181, 72);
-            this.cmbTipType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipType.Location = new System.Drawing.Point(362, 138);
+            this.cmbTipType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTipType.Name = "cmbTipType";
-            this.cmbTipType.Size = new System.Drawing.Size(62, 21);
+            this.cmbTipType.Size = new System.Drawing.Size(120, 33);
             this.cmbTipType.TabIndex = 5;
             // 
             // lstChecks
             // 
             this.lstChecks.FormattingEnabled = true;
-            this.lstChecks.Location = new System.Drawing.Point(270, 48);
-            this.lstChecks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstChecks.ItemHeight = 25;
+            this.lstChecks.Location = new System.Drawing.Point(578, 88);
+            this.lstChecks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstChecks.Name = "lstChecks";
-            this.lstChecks.Size = new System.Drawing.Size(180, 147);
+            this.lstChecks.Size = new System.Drawing.Size(356, 279);
             this.lstChecks.TabIndex = 6;
+            this.lstChecks.SelectedIndexChanged += new System.EventHandler(this.lstChecks_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(476, 48);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(357, 313);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(94, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Location";
             // 
             // txtLocation
             // 
-            this.txtLocation.Location = new System.Drawing.Point(478, 72);
-            this.txtLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLocation.Location = new System.Drawing.Point(360, 340);
+            this.txtLocation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(88, 20);
+            this.txtLocation.Size = new System.Drawing.Size(172, 31);
             this.txtLocation.TabIndex = 8;
             this.txtLocation.Text = "Columbus, OH";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(270, 201);
+            this.label3.Location = new System.Drawing.Point(578, 383);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.Size = new System.Drawing.Size(109, 25);
             this.label3.TabIndex = 9;
             this.label3.Text = "Sum Total";
             // 
             // lblSumTotal
             // 
             this.lblSumTotal.AutoSize = true;
-            this.lblSumTotal.Location = new System.Drawing.Point(273, 229);
+            this.lblSumTotal.Location = new System.Drawing.Point(584, 436);
+            this.lblSumTotal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblSumTotal.Name = "lblSumTotal";
-            this.lblSumTotal.Size = new System.Drawing.Size(34, 13);
+            this.lblSumTotal.Size = new System.Drawing.Size(66, 25);
             this.lblSumTotal.TabIndex = 10;
             this.lblSumTotal.Text = "$0.00";
             // 
@@ -157,9 +161,10 @@
             // 
             this.rdbDineIn.AutoSize = true;
             this.rdbDineIn.Checked = true;
-            this.rdbDineIn.Location = new System.Drawing.Point(181, 103);
+            this.rdbDineIn.Location = new System.Drawing.Point(362, 198);
+            this.rdbDineIn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdbDineIn.Name = "rdbDineIn";
-            this.rdbDineIn.Size = new System.Drawing.Size(59, 17);
+            this.rdbDineIn.Size = new System.Drawing.Size(110, 29);
             this.rdbDineIn.TabIndex = 11;
             this.rdbDineIn.TabStop = true;
             this.rdbDineIn.Text = "Dine In";
@@ -168,20 +173,23 @@
             // rdbFastFood
             // 
             this.rdbFastFood.AutoSize = true;
-            this.rdbFastFood.Location = new System.Drawing.Point(181, 126);
+            this.rdbFastFood.Location = new System.Drawing.Point(362, 242);
+            this.rdbFastFood.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rdbFastFood.Name = "rdbFastFood";
-            this.rdbFastFood.Size = new System.Drawing.Size(72, 17);
+            this.rdbFastFood.Size = new System.Drawing.Size(140, 29);
             this.rdbFastFood.TabIndex = 12;
             this.rdbFastFood.Text = "Fast Food";
             this.rdbFastFood.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(578, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(1483, 44);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -191,37 +199,38 @@
             this.saveToolStripMenuItem,
             this.openToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(64, 36);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(173, 38);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(173, 38);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
-            // txtOpen
+            // txtDisplay
             // 
-            this.txtOpen.Location = new System.Drawing.Point(97, 193);
-            this.txtOpen.Multiline = true;
-            this.txtOpen.Name = "txtOpen";
-            this.txtOpen.Size = new System.Drawing.Size(100, 113);
-            this.txtOpen.TabIndex = 14;
+            this.txtDisplay.Location = new System.Drawing.Point(985, 88);
+            this.txtDisplay.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDisplay.Multiline = true;
+            this.txtDisplay.Name = "txtDisplay";
+            this.txtDisplay.Size = new System.Drawing.Size(356, 279);
+            this.txtDisplay.TabIndex = 14;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 318);
-            this.Controls.Add(this.txtOpen);
+            this.ClientSize = new System.Drawing.Size(1483, 533);
+            this.Controls.Add(this.txtDisplay);
             this.Controls.Add(this.rdbFastFood);
             this.Controls.Add(this.rdbDineIn);
             this.Controls.Add(this.lblSumTotal);
@@ -237,7 +246,7 @@
             this.Controls.Add(this.lblSubtotal);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
@@ -266,7 +275,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.TextBox txtOpen;
+        private System.Windows.Forms.TextBox txtDisplay;
     }
 }
 
