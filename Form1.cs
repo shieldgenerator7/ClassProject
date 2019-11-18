@@ -40,47 +40,54 @@ namespace ClassProject
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            float total = 0;
-            //Get the subtotal from the textbox
-            float subtotal = float.Parse(txtSubtotal.Text);
-            //Get the tip percentage
-            float tipPercentage = 0;
-            //tipType = (TipType)cmbTipType.Text;
-            //tipType = TipType.POOR;
-            tipType = (TipType)cmbTipType.SelectedItem;
-            switch (tipType)
+            try
             {
-                case TipType.EXCELLENT:
-                    tipPercentage = 0.15f;
-                    break;
-                case TipType.GOOD:
-                    tipPercentage = 0.10f;
-                    break;
-                case TipType.POOR:
-                    tipPercentage = 0;
-                    break;
+                float total = 0;
+                //Get the subtotal from the textbox
+                float subtotal = float.Parse(txtSubtotal.Text);
+                //Get the tip percentage
+                float tipPercentage = 0;
+                //tipType = (TipType)cmbTipType.Text;
+                //tipType = TipType.POOR;
+                tipType = (TipType)cmbTipType.SelectedItem;
+                switch (tipType)
+                {
+                    case TipType.EXCELLENT:
+                        tipPercentage = 0.15f;
+                        break;
+                    case TipType.GOOD:
+                        tipPercentage = 0.10f;
+                        break;
+                    case TipType.POOR:
+                        tipPercentage = 0;
+                        break;
+                }
+                //Calculate the tip
+                float tip = subtotal * tipPercentage;
+                //Calculate the total
+                total = subtotal + tip;
+                //Create check object
+                Check check = null;
+                if (rdbDineIn.Checked == true)
+                {
+                    check = new Check(total, txtLocation.Text);
+                }
+                else if (rdbFastFood.Checked == true)
+                {
+                    check = new FastFoodCheck(total, txtLocation.Text);
+                }
+                total = check.calculateTotal(subtotal);
+                //Display the total to the user
+                lblTotal.Text = "" + total;
+                //Add check to list
+                checks.Add(check);
+                //Refresh check list
+                refreshList();
             }
-            //Calculate the tip
-            float tip = subtotal * tipPercentage;
-            //Calculate the total
-            total = subtotal + tip;
-            //Create check object
-            Check check = null;
-            if (rdbDineIn.Checked == true)
+            catch(FormatException fe)
             {
-                check = new Check(total, txtLocation.Text);
+                MessageBox.Show("Subtotal only accepts numbers!");
             }
-            else if (rdbFastFood.Checked == true)
-            {
-                check = new FastFoodCheck(total, txtLocation.Text);
-            }
-            total = check.calculateTotal(subtotal);
-            //Display the total to the user
-            lblTotal.Text = "" + total;
-            //Add check to list
-            checks.Add(check);
-            //Refresh check list
-            refreshList();
         }
 
         public void refreshList()
