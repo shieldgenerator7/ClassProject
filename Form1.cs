@@ -7,7 +7,6 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -122,38 +121,10 @@ namespace ClassProject
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = saveDialog.FileName;
-                FileStream fileBuffer = File.Create(filePath);
+                FileStream buffer = File.Create(filePath);
                 IFormatter formatter = new BinaryFormatter();
-                MemoryStream memoryBuffer = new MemoryStream();
-                formatter.Serialize(memoryBuffer, checks);
-
-                //
-                string password = "Pa$$w0rd";
-                string salt = "S@lt";
-                var rgb = new Rfc2898DeriveBytes(password, Encoding.Unicode.GetBytes(salt));
-                var algorithm = new AesManaged();
-                MemoryStream memoryBufferEncrypted = new MemoryStream();
-                var rgbKey = rgb.GetBytes(algorithm.KeySize / 8);
-                var rgbIV = rgb.GetBytes(algorithm.BlockSize / 8);
-                var encryptor = algorithm.CreateEncryptor(rgbKey, rgbIV);
-                var cryptoStream = new CryptoStream(
-                    memoryBufferEncrypted,
-                    encryptor,
-                    CryptoStreamMode.Write
-                    );
-                //var bytesToTransform = checks.
-                cryptoStream.Write(
-                    memoryBuffer.ToArray(),
-                    0,
-                    memoryBuffer.ToArray().Length
-                    );
-                cryptoStream.FlushFinalBlock();
-
-
-                formatter.Serialize(fileBuffer, memoryBufferEncrypted);
-                fileBuffer.Close();
-                cryptoStream.Close();
-                memoryBuffer.Close();
+                formatter.Serialize(buffer, checks);
+                buffer.Close();
             }
         }
 
